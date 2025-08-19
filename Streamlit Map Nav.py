@@ -1,7 +1,7 @@
 import streamlit as st
 import openrouteservice
 import folium
-from streamlit_folium import folium_static
+from streamlit_folium import st_folium
 
 # OpenRouteService API Key
 API_key = 'eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjVjNzRiYmJlOGQ4YzRkYTdiNmFkYmQxNGU2NTk4NjEyIiwiaCI6Im11cm11cjY0In0='
@@ -47,4 +47,4 @@ if st.button("Generate Map") and origin and destination:
     
     # Display result
     st.success(f"Distance: {distance_km} km")
-    folium_static(map_route)
+    st_folium(map_route)
