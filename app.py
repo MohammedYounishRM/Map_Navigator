@@ -47,4 +47,5 @@ if st.button("Generate Map") and origin and destination:
     
     # Display result
     st.success(f"Distance: {distance_km} km")
-    st_folium(map_route)
+    st_folium(map_route, width=700, height=500, key="map")
+
