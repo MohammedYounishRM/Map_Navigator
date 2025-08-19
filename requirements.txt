@@ -1,4 +1,4 @@
-streamlit
-streamlit-folium
-folium
-openrouteservice
+streamlit==1.48.1
+folium==0.20.0
+streamlit-folium==0.25.1
+openrouteservice==2.3.3
