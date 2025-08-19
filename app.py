@@ -60,5 +60,3 @@ if st.button("Generate Map") and origin and destination:
 # Always display stored map if available
 if st.session_state.map_obj:
     st_folium(st.session_state.map_obj, width=700, height=500)
-    st_folium(map_route, key="map")
-
