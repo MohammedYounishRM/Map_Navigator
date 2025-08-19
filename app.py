@@ -3,8 +3,7 @@ import openrouteservice
 import folium
 from streamlit_folium import st_folium
 
-# OpenRouteService API Key
-API_key = st.secrets["ORS_API_KEY"]  # use Streamlit secrets instead of hardcoding
+API_key = st.secrets["ORS_API_KEY"]
 client = openrouteservice.Client(key=API_key)
 
 st.set_page_config(page_title="Route Map Generator", layout="centered")
@@ -61,3 +60,4 @@ if st.button("Generate Map") and origin and destination:
 # Always display stored map if available
 if st.session_state.map_obj:
     st_folium(st.session_state.map_obj, width=700, height=500)
+    st_folium(m, key="map")
